@@ -1,6 +1,33 @@
 .dropdown-menu{
-    height:100%;
-    background: black;
+    height:1000px;
+    background:#1a1a1a;
+    position: absolute;
+    top:0px;
+    margin:0;
+    padding-top:50px;
+    width:200px;
+}
+.dropdown-menu >li> a{
+  color:#999999!important;
+  padding:10px 20px;
+  font-size: 15px;
+}
+.dropdown-menu >li> a:hover{
+  background-color:#404040;
+  color:white!important;
+}
+.dropdown{
+  position: fixed;
+  right:0;
+  z-index:1000;
+}
+.dropdown .btn{
+  background:transparent;
+  border:none;
+  margin:10px;
+}
+.btn:focus{
+  background:#333!important;
 }
 #about{
   background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/delhi.jpg");
@@ -8,9 +35,6 @@
   height:600px;
   color:white;
   padding:150px 0px;
-}
-#education h3{
-  line-height: 2!important;
 }
 #education{
   padding:50px 0px;
@@ -34,12 +58,48 @@
   padding-bottom: 50px;
 }
 .thumbnail{
-  padding:20px;
+  padding:20px 30px;
   border:none;
   background:gray;
 }
 @media all and (min-width: 769px){
   h1{
     font-size: 70px;
+  }
+  #education >h3{
+  line-height: 2;
+}
+}
+@media all and (max-width: 768px){
+  #education{
+    width:80%!important;
+  }
+  #education >h3{
+  line-height: 1.5;
+  }
+  #about{
+    height:400px;
+    padding:70px 0px;
+  }
+}
+@media all and (max-width: 500px){
+  .dropdown-menu >li> a{
+    padding:5px 10px;
+    font-size: 12px;
+  }
+  #about{
+    height: 350px;
+    padding:40px 0px;
+  }
+  h3{
+    font-size: 15px;
+  }
+  .dropdown-menu{
+    padding-top: 50px;
+    min-width:140px!important;
+    width: 140px;
+  }
+  #education >h3{
+  line-height: 1.5;
   }
 }
