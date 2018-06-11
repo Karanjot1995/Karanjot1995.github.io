@@ -17,6 +17,9 @@
   background-color:#404040;
   color:white!important;
 }
+.dropdown-menu >li> a.portfolio:hover{
+  background:none;
+}
 .dropdown{
   position: fixed;
   right:0;
@@ -87,6 +90,9 @@
   .dropdown-menu >li> a{
     padding:5px 10px;
     font-size: 12px;
+  }
+  .dropdown-menu >li> a>h4{
+    font-size: 15px;
   }
   #about{
     height: 350px;
