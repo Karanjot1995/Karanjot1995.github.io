@@ -46,6 +46,11 @@
 #work div{
   padding-bottom:50px;
 }
+#skills ul{
+  margin:0 auto;
+  width:200px;
+  padding-bottom: 30px;
+}
 .container-fluid{
   background:gray;
   padding-top:50px;
