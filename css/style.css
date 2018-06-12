@@ -38,7 +38,7 @@
   background-size: 100% 100%;
   height:auto;
   color:white;
-  padding:150px 0px;
+  padding:120px 0px;
 }
 #about div img{
   margin:3px;
@@ -137,8 +137,8 @@
     font-size: 20px;
   }
   #about div img{
-    height:20px;
-    width:20px;
+    height:30px;
+    width:30px;
     margin:0;
   }
   .dropdown-menu{
