@@ -131,6 +131,7 @@
   #about div img{
     height:20px;
     width:20px;
+    margin:0;
   }
   .dropdown-menu{
     padding-top: 50px;
