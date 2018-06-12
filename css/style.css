@@ -55,6 +55,9 @@
 #work div{
   padding-bottom:50px;
 }
+#work img{
+  border:3px solid #4d4d4d;
+}
 #skills ul{
   margin:0 auto;
   width:200px;
