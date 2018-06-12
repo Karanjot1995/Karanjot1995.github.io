@@ -58,15 +58,18 @@
 #work img{
   border:3px solid #4d4d4d;
 }
-#skills ul{
-  margin:0 auto;
-  width:200px;
-  padding-bottom: 30px;
+#skills a img{
+  width:100px;
+  height:100px;
+}
+#skills div a{
+  padding:10px;
+  color:white;
 }
 .container-fluid{
   background:gray;
   padding-top:50px;
-  padding-bottom:50px;
+  padding-bottom:70px;
   color:white;
 }
 .container{
