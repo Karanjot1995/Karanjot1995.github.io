@@ -112,6 +112,10 @@
     height:auto;
     padding:80px 0px;
   }
+  #skills a img{
+  width:80px;
+  height:80px;
+  }
 }
 @media all and (max-width: 500px){
   .dropdown-menu >li> a{
@@ -143,5 +147,12 @@
   }
   #education >h3{
   line-height: 1.5;
+  }
+  #skills a img{
+  width:50px;
+  height:50px;
+  }
+  #skills h4{
+    font-size: 12px;
   }
 }
