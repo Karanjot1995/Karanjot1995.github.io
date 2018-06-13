@@ -58,12 +58,15 @@
 #work img{
   border:3px solid #4d4d4d;
 }
+#work img:hover{
+  transform: scale(1.1);
+}
 #skills a img{
   width:100px;
   height:100px;
   border:2px solid #333;
 }
-#skills div a{
+#skills ul a{
   padding:10px;
   color:white;
 }
@@ -86,6 +89,9 @@
   padding:20px 30px;
   border:none;
   background:#595959;
+}
+#skills img:hover{
+  transform:scale(1.1);
 }
 @media all and (min-width: 769px){
   h1{
