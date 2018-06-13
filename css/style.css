@@ -68,7 +68,7 @@
   color:white;
 }
 .container-fluid{
-  background:gray;
+  background:#595959;
   padding-top:50px;
   padding-bottom:70px;
   color:white;
@@ -85,14 +85,14 @@
 .thumbnail{
   padding:20px 30px;
   border:none;
-  background:gray;
+  background:#595959;
 }
 @media all and (min-width: 769px){
   h1{
     font-size: 70px;
   }
   #education >h3{
-  line-height: 2;
+  line-height: 1.5;
   }
   #about h2{
     font-size: 45px;
