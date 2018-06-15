@@ -33,20 +33,20 @@
 .btn:focus{
   background:#333!important;
 }
-#about{
+#home{
   background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/delhi.jpg");
   background-size: 100% 100%;
   height:auto;
   color:white;
   padding:120px 0px;
 }
-#about div img{
+#home div img{
   margin:3px;
   opacity:0.5;
   height:40px;
   width:40px;
 }
-#about div img:hover{
+#home div img:hover{
   opacity: 0.8;
 }
 #education{
@@ -101,10 +101,10 @@
   #education >h3{
   line-height: 1.5;
   }
-  #about h2{
+  #home h2{
     font-size: 45px;
   }
-  #about>img{
+  #home>img{
     height:200px;
     width:200px;
   }
@@ -133,7 +133,7 @@
   .dropdown-menu >li> a>h4{
     font-size: 15px;
   }
-  #about{
+  #home{
     height:auto;
     padding:90px 0px;
   }
@@ -143,7 +143,7 @@
   h2{
     font-size: 20px;
   }
-  #about div img{
+  #home div img{
     height:30px;
     width:30px;
     margin:0;
