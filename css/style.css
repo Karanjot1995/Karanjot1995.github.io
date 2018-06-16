@@ -52,6 +52,9 @@
 #education{
   padding:50px 0px;
 }
+#education >h3, #work div>h3{
+  line-height: 1.5;
+}
 #work div{
   padding-bottom:50px;
 }
@@ -98,9 +101,6 @@
   h1{
     font-size: 70px;
   }
-  #education >h3{
-  line-height: 1.5;
-  }
   #home h2{
     font-size: 45px;
   }
@@ -110,11 +110,8 @@
   }
 }
 @media all and (max-width: 768px){
-  #education{
+  #education, #work{
     width:80%!important;
-  }
-  #education >h3{
-  line-height: 1.5;
   }
   #about{
     height:auto;
@@ -152,9 +149,6 @@
     padding-top: 50px;
     min-width:140px!important;
     width: 140px;
-  }
-  #education >h3{
-  line-height: 1.5;
   }
   #skills{
     padding:50px 0 70px 0;
