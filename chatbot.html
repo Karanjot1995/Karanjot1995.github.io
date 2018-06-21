@@ -29,6 +29,9 @@ body{
 	 background:#fff;
 	 border-radius:0px 0px 20px 20px;
 }
+.form-control{
+	cursor:pointer;
+}
 
 .content{
 	overflow-y: scroll;
@@ -60,6 +63,9 @@ body{
 	outline:none;
 	border:none;
 }
+.form-control[disabled]{
+		cursor:pointer;
+	}
 @media all and (max-width: 400px){
 	.window.col-xs-8{
 		width:100%;
@@ -75,7 +81,7 @@ body{
 		height:100%;
 		border-radius: 0;
 	}
-	
+
 	.enter, #input-collapse{
 		border-radius: 0!important;
 	}
@@ -91,8 +97,8 @@ body{
         	</div>
                
             <div class="enter col-lg-12 col-md-12 col-sm-12 col-xs-12" >
-            	<div class="input-group container-fluid">
-            		<input type="text" class="form-control" data-toggle="collapse" data-target="#input-collapse"" id="frm">
+            	<div  data-toggle="collapse" data-target="#input-collapse" class="input-group container-fluid">
+            		<input type="text" class="form-control" placeholder="Choose from below..." disabled>
             		<a class="input-group-addon" type="submit" class=""><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16604-200.png" height="20px" width="20" style="opacity: 0.6"></a>
             	</div>
             	    <div class="collapse container-fluid" id="input-collapse" style=";background:#000;border-radius: 0px 0px 10px 10px">
