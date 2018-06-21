@@ -2,73 +2,91 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta id="no-user-scale" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
     <title>TEST All InputUIs</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" media="screen" />
-    <!-- <link rel="stylesheet" href="../../resources/css/lib/bootstrap.min.css" media="screen" /> -->
-    <link rel="stylesheet" href="../../resources/css/lib/card.css" />
-    <!-- <link rel="stylesheet" href="../../resources/css/lib/card.min.css" /> -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="../../resources/css/lib/font-awesome.min.css"> -->
-    <link id="star-rating-css" href="../../resources/css/lib/star-rating.min.css" media="all" rel="stylesheet" />
-    <link rel="stylesheet" href="../../resources/css/lib/mobiscroll-2.4.custom.min.css" />
-
-    <link rel="stylesheet" href="../../resources/css/style_static.css">
-    <link rel="stylesheet" href="../../resources/css/themes/facebook_messenger.css" />
-    <!-- <link rel="stylesheet" href="../../resources/css/themes/whatsapp.css" /> -->
-
-    <!-- <link href='//fonts.googleapis.com/css?family=Arimo|Open+Sans:300,400|Roboto|Lato|Raleway|Open+Sans+Condensed:300|Poiret+One' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+<style>
+body{
+	overflow: hidden;
+}
+#chat .window{
+	border-radius:10px;
+	background:#fff;
+	height:500px;
+	position: relative;
+	padding: 0;
+}
+.enter{
+	 position: absolute;bottom:0;left:0;
+	 margin:0 auto;
+	 padding: 0px;
+	 background:#fff;
+	 border-radius:0px 0px 20px 20px;
+}
 
-<body class="chat-main-body" style="padding:0px;">
-    <ul class="pages">
-        <li class="chat page">
-            <div class="chatArea">
-                <ul class="messages">
-                    <li class="log col-xs-12 power">
-                        <span class="col-xs-4 col-xs-offset-4 powered-by"><a href="https://hellotars.com/?utm_medium=banner&utm_campaign=demo&utm_source=" target="_blank">Powered by <b>TARS</b></a></span>
-                    </li>
-                    <li class="message col-xs-9 pull-left typing" style="display: list-item;">
-                        <div class="messageBody ui-chatbox-msg alert chat-bubble user-chat-bubble padding-no-margin pull-left">
-                            <span class=""><div id="wave"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div id="calibrateDiv" style="position: absolute;"></div>
-            <div class="inputContainter">
-                <input class="inputMessage" placeholder="Please wait…" disabled style="color:black; -webkit-opacity:1;" />
-                <button id="send-button" class="sendButton">
-                    <i id="send_button_icon" class="fa" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div id="snackbar-container" class="snackBar" style="display: none">
-                <ul class="list-group selectOptions snackbar-options"></ul>
-            </div>
-            <div id="suggestion-menu-container" class="search-suggestions" style="display: none">
-                <ul class="list-group search-suggestions-options"></ul>
-            </div>
-        </li>
-    </ul>
-    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZeDXCnsFzSZ_vL0ZYPH7L8sY0YX3xlvs"></script> -->
-    <!-- <script async id="tarsboot" data-base-url="/convBot/resources" data-main="https://s3-ap-southeast-1.amazonaws.com/tars-bot/assets/app.min-f6a60a71" data-arg='{"data_url": "conv_data.json", "fns_url": "/convBot/demos/test_inputuis/conv_action_fns"}' src="https://s3-ap-southeast-1.amazonaws.com/tars-bot/assets/lib.min-4d0ba257.js"></script> -->
-    <script 
-        id="tarsboot" 
-        data-base-url="/convBot/resources" 
-        data-main="../../resources/js/boot/boot" 
-        data-arg='{"data_url": "conv_data.json", "fns_url": "/convBot/demos/test_inputuis/conv_action_fns"}' 
-        src="../../resources/js/lib/require.min.js">
-    </script>
+.content{
+	overflow-y: scroll;
+}
+.enter .input-group{
+	position: relative;
+	padding:0;
+	width:94%;
+	margin-bottom:10px;
+	border-radius:20px;
+	border:1px solid #ccc;
+}
+#chat .enter input{
+	border-radius: 20px 0px 0px 20px;	
+	background-color: rgb(241, 241, 241);
+	border:none;
+}
 
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-63097026-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+.input-group a{
+	border-radius: 0px 20px 20px 0px;
+	background:rgb(241, 241, 241);
+	cursor: pointer;
+	text-decoration: none;
+	border:none;
+}
+#chat .enter input:focus, #chat .enter input:active{
+	box-shadow: none;
+	border:none;
+	outline:none;
+	border:none;
+}
+
+</style>
+
+<body style="background:gray">
+    <div class="container-fluid" id="chat" style="margin:50px 0px;">
+        <div class="window col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+        	<div class="content" style="height:450px;margin:20px 0px">
+        		
+        	</div>
+               
+            <div class="enter col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+            	<div class="input-group container-fluid">
+            		<input type="text" class="form-control" data-toggle="collapse" data-target="#input-collapse"" id="frm">
+            		<a class="input-group-addon" type="submit" class=""><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16604-200.png" height="20px" width="20" style="opacity: 0.6"></a>
+            	</div>
+            	    <div class="collapse container-fluid" id="input-collapse" style=";background:#000;border-radius: 0px 0px 10px 10px">
+            		
+            		    <h3>chat box</h3>
+            		    <p>jhcmvdzhm</p>
+            	    </div>
+
+            	
+            </div>
+        </div>
+        <div class="col-lg-4">
+
+        </div>
+    </div>
 </body>
 
 </html>
