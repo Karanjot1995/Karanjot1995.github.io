@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta id="no-user-scale" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>TEST All InputUIs</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" media="screen" />
+    <!-- <link rel="stylesheet" href="../../resources/css/lib/bootstrap.min.css" media="screen" /> -->
+    <link rel="stylesheet" href="../../resources/css/lib/card.css" />
+    <!-- <link rel="stylesheet" href="../../resources/css/lib/card.min.css" /> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="../../resources/css/lib/font-awesome.min.css"> -->
+    <link id="star-rating-css" href="../../resources/css/lib/star-rating.min.css" media="all" rel="stylesheet" />
+    <link rel="stylesheet" href="../../resources/css/lib/mobiscroll-2.4.custom.min.css" />
+
+    <link rel="stylesheet" href="../../resources/css/style_static.css">
+    <link rel="stylesheet" href="../../resources/css/themes/facebook_messenger.css" />
+    <!-- <link rel="stylesheet" href="../../resources/css/themes/whatsapp.css" /> -->
+
+    <!-- <link href='//fonts.googleapis.com/css?family=Arimo|Open+Sans:300,400|Roboto|Lato|Raleway|Open+Sans+Condensed:300|Poiret+One' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
+</head>
+
+<body class="chat-main-body" style="padding:0px;">
+    <ul class="pages">
+        <li class="chat page">
+            <div class="chatArea">
+                <ul class="messages">
+                    <li class="log col-xs-12 power">
+                        <span class="col-xs-4 col-xs-offset-4 powered-by"><a href="https://hellotars.com/?utm_medium=banner&utm_campaign=demo&utm_source=" target="_blank">Powered by <b>TARS</b></a></span>
+                    </li>
+                    <li class="message col-xs-9 pull-left typing" style="display: list-item;">
+                        <div class="messageBody ui-chatbox-msg alert chat-bubble user-chat-bubble padding-no-margin pull-left">
+                            <span class=""><div id="wave"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="calibrateDiv" style="position: absolute;"></div>
+            <div class="inputContainter">
+                <input class="inputMessage" placeholder="Please wait…" disabled style="color:black; -webkit-opacity:1;" />
+                <button id="send-button" class="sendButton">
+                    <i id="send_button_icon" class="fa" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div id="snackbar-container" class="snackBar" style="display: none">
+                <ul class="list-group selectOptions snackbar-options"></ul>
+            </div>
+            <div id="suggestion-menu-container" class="search-suggestions" style="display: none">
+                <ul class="list-group search-suggestions-options"></ul>
+            </div>
+        </li>
+    </ul>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZeDXCnsFzSZ_vL0ZYPH7L8sY0YX3xlvs"></script> -->
+    <!-- <script async id="tarsboot" data-base-url="/convBot/resources" data-main="https://s3-ap-southeast-1.amazonaws.com/tars-bot/assets/app.min-f6a60a71" data-arg='{"data_url": "conv_data.json", "fns_url": "/convBot/demos/test_inputuis/conv_action_fns"}' src="https://s3-ap-southeast-1.amazonaws.com/tars-bot/assets/lib.min-4d0ba257.js"></script> -->
+    <script 
+        id="tarsboot" 
+        data-base-url="/convBot/resources" 
+        data-main="../../resources/js/boot/boot" 
+        data-arg='{"data_url": "conv_data.json", "fns_url": "/convBot/demos/test_inputuis/conv_action_fns"}' 
+        src="../../resources/js/lib/require.min.js">
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-63097026-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
