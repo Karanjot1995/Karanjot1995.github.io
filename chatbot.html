@@ -34,13 +34,13 @@ body{
 }
 
 .content{
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 .enter .input-group{
 	position: relative;
 	padding:0;
 	width:94%;
-	margin-bottom:10px;
+	margin:10px;
 	border-radius:20px;
 	border:1px solid #ccc;
 }
@@ -66,12 +66,24 @@ body{
 .form-control[disabled]{
 		cursor:pointer;
 	}
-@media all and (max-width: 400px){
-	.window.col-xs-8{
-		width:100%;
+	::-webkit-scrollbar {
+		width:5px;
 	}
-	.window.col-xs-offset-2{
-		margin-left: 0%;
+	::-webkit-scrollbar-track{
+		background:#f1f1f1;
+	}
+	::-webkit-scrollbar-thumb{
+		background:#888;
+	}
+@media all and (min-width: 401px){
+    #chat .window{
+    	width:400px;
+    	margin:0 auto;
+    }
+}
+@media all and (max-width: 400px){
+	#chat .window{
+		width:100%;
 	}
 	.container-fluid#chat{
 		padding: 0;
@@ -81,7 +93,9 @@ body{
 		height:100%;
 		border-radius: 0;
 	}
-
+    .content{
+    	border-radius: 20px 20px 0px 0px;
+    }
 	.enter, #input-collapse{
 		border-radius: 0!important;
 	}
@@ -90,30 +104,29 @@ body{
 </style>
 
 <body>
-    <div class="container-fluid" id="chat" style="margin:50px 0px;">
-        <div class="window col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
-        	<div class="content" style="height:450px;margin:20px 0px">
+    <div class="container-fluid" id="chat" style="margin:50px 0px;padding:0">
+        <div class="window" style="padding: 20px 0px">
+        	<div class="content container-fluid" style="height:95%;">
         		
         	</div>
                
-            <div class="enter col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+            <div class="enter" >
             	<div  data-toggle="collapse" data-target="#input-collapse" class="input-group container-fluid">
             		<input type="text" class="form-control" placeholder="Choose from below..." disabled>
             		<a class="input-group-addon" type="submit" class=""><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16604-200.png" height="20px" width="20" style="opacity: 0.6"></a>
             	</div>
-            	    <div class="collapse container-fluid" id="input-collapse" style=";background:#000;border-radius: 0px 0px 10px 10px">
+            	<div class="collapse container-fluid" id="input-collapse" style=";background:#000;border-radius: 0px 0px 10px 10px">
             		
             		    <h3>chat box</h3>
             		    <p>jhcmvdzhm</p>
-            	    </div>
+            	</div>
 
             	
             </div>
-        </div>
-        <div class="col-lg-4">
 
         </div>
     </div>
 </body>
 
 </html>
+ <!--col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2-->
