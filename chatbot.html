@@ -11,6 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/mobiscroll.javascript.min.js"></script>
+    <link href="css/mobiscroll.javascript.min.css" rel="stylesheet" type="text/css">
 </head>
 <style>
 body{
@@ -102,6 +104,13 @@ body{
 #ent input{
     height:40px;
 }
+#scroller, #mytime{
+    border-radius:10px!important;
+    margin-left:25%;
+    margin-top:15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
 @media all and (min-width: 401px){
     #chat .window{
         width:400px;
@@ -169,7 +178,7 @@ body{
                 </div>
 
                 <div class="inputs hide">
-                    <p><b>Oops!</b> Invalid Input!</p>
+                    <p><b>Adios!</b></p>
                 </div>
 
                     
@@ -177,18 +186,16 @@ body{
                
             <div class="enter" id="ent" >
                 <div  data-toggle="collapse" data-target="#input-collapse" class="input-group container-fluid">
-                    <input type="text" class="form-control" placeholder="Choose from below...">
+                    <input type="text" class="form-control" placeholder="Enter value..." disabled>
                     <a class="input-group-addon" type="submit"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16604-200.png" height="20px" width="20" style="opacity: 0.6"></a>
                 </div>
-                <div class="collapse container-fluid" id="input-collapse disabled" style=";background:#000;border-radius: 0px 0px 10px 10px">
-                    
-                        <h3>chat box</h3>
-                        <p>jhcmvdzhm</p>
+                <div class="collapse container-fluid" id="input-collapse" style=";background:#000;border-radius: 0px 0px 10px 10px">
+                    <input id="scroller" placeholder="Select Date">
+                    <input id="mytime" placeholder="Select Time" style="display: none" >
                 </div>
 
                 
             </div>
-
         </div>
     </div>
 
@@ -205,21 +212,30 @@ body{
             var bttn=document.querySelector("#ent").children[0].children[1];
             inp.addEventListener('keypress', onenter);
             bttn.addEventListener('click', onclick);
-                         
+            var scr=document.querySelector("#scroller");
+
             function abc(){
-                           
-            if(ques==0){  
-            bot.children[1].className="user";                
+            var inp=document.querySelector("#ent").children[0].children[0]; 
+            var scroll=document.querySelector("#scroller");
+            var time=document.querySelector("#mytime");
+            if(ques==0){
+            inp=scroll;             
+            bot.children[1].className="user";               
             bot.children[2].className="inputs";
-            inp.innerHTML=this.value;
             bot.children[1].innerHTML=inp.value;
+            scroll.style.display="none";
+            time.style.display="block";
+            inp.value="";
             }
                                                 
             else if(ques==1){
+            inp=time;              
             bot.children[4].className="inputs"; 
             bot.children[3].className="user";
-            inp.innerHTML=this.value;
             bot.children[3].innerHTML=inp.value;
+            var inp=document.querySelector("#ent").children[0].children[0];
+            document.querySelector("#input-collapse").className="hide";
+            inp.disabled=false;
             }
 
             else if(ques==2){
@@ -258,7 +274,19 @@ body{
                     ques++;
                     inp.value=""; 
             }
-            
+            mobiscroll.date('#scroller', {
+              theme: 'material',
+              display: 'center'
+            });
+            mobiscroll.time('#mytime', { 
+              theme: 'material',
+              display: 'center'
+            });
+           
+        /*$('#dob').mobiscroll().date({
+            theme: 'ios',
+            display: 'bottom',
+            });*/    
 
     </script>
 </body>
