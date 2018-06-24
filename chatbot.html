@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     
-    <title>TEST All InputUIs</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <title>TEST All Inputs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -63,7 +65,7 @@ body{
 	outline:none;
 	border:none;
 }
-.form-control[disabled]{
+.form-control input{
 		cursor:pointer;
 	}
 	::-webkit-scrollbar {
@@ -75,6 +77,28 @@ body{
 	::-webkit-scrollbar-thumb{
 		background:#888;
 	}
+
+.inputs{
+	min-height:40px;
+	background:rgb(241, 241, 241);;
+	border-radius: 0px 20px 20px 20px;
+	padding: 7px 5px 2px 15px;
+	margin:0;
+	width:50%;
+}
+.user{
+	min-height:40px;
+	background:skyblue;
+	border-radius:20px 0px 20px 20px;
+	padding: 7px 5px 2px 15px;
+	margin:0;
+	width:50%;
+	margin-left:50%;
+	
+}
+.inputs p, .user p{
+	font-size: 16px;
+}
 @media all and (min-width: 401px){
     #chat .window{
     	width:400px;
@@ -106,13 +130,51 @@ body{
 <body>
     <div class="container-fluid" id="chat" style="margin:50px 0px;padding:0">
         <div class="window" style="padding: 20px 0px">
-        	<div class="content container-fluid" style="height:95%;">
+        	<div class="content container-fluid" style="height:95%;" id="contents">
+        		<div class="inputs" id="output">
+        		</div>
+
+        		<div class="user hide" id="usr">
+        		</div>
+
+        		<div class="inputs hide">
+        			<p>enter time</p>
+        		</div>
+
+        		<div class="user hide" id="usr">
+        		</div>
         		
+        		<div class="inputs hide">
+        			<p>enter name</p>
+        		</div>
+
+        		<div class="user hide" id="usr">       		
+        		</div>
+
+        		<div class="inputs hide">
+        			<p>enter age</p>
+        		</div>
+
+        		<div class="user hide" id="usr">         
+        		</div>
+
+        		<div class="inputs hide">
+        			<p>Thanks for your time!</p>
+        		</div>
+
+        		<div class="user hide" id="usr">
+        		</div>
+
+        		<div class="inputs hide">
+        			<p>Oops! Invalid Input!</p>
+        		</div>
+
+        			
         	</div>
                
-            <div class="enter" >
+            <div class="enter" id="ent" >
             	<div  data-toggle="collapse" data-target="#input-collapse" class="input-group container-fluid">
-            		<input type="text" class="form-control" placeholder="Choose from below..." disabled>
+            		<input type="text" class="form-control" placeholder="Choose from below...">
             		<a class="input-group-addon" type="submit" class=""><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16604-200.png" height="20px" width="20" style="opacity: 0.6"></a>
             	</div>
             	<div class="collapse container-fluid" id="input-collapse" style=";background:#000;border-radius: 0px 0px 10px 10px">
@@ -126,7 +188,70 @@ body{
 
         </div>
     </div>
-</body>
 
+
+    <script type="text/javascript">
+
+    	    var ques=0;
+    		var question = '<p>Enter date</p>';
+    		var bot = document.getElementById('contents');
+    		var inputs = bot.children[0];
+    	    inputs.innerHTML = question;
+    	    var users=document.getElementById("usr");
+    	    
+    	    var inp=document.querySelector("#ent").children[0].children[0];
+    	    inp.addEventListener('keypress', onenter);
+    	    
+    	    	
+    	    function abc(){
+    	    	    	   
+
+    	    if(ques==0){  
+    	    bot.children[1].className="user";  	          	 
+     	    bot.children[2].className="inputs";
+     	    inp.innerHTML=this.value;
+    	    bot.children[1].innerHTML=inp.value;
+   	        }
+    	    	    			    	    	
+    	    else if(ques==1){
+   	    	bot.children[4].className="inputs";	
+    	    bot.children[3].className="user";
+    	    inp.innerHTML=this.value;
+    	    bot.children[3].innerHTML=inp.value;
+    	    }
+
+    	    else if(ques==2){
+   	    	bot.children[6].className="inputs";  	
+    	    bot.children[5].className="user";
+    	    inp.innerHTML=this.value;
+    	    bot.children[5].innerHTML=inp.value;
+    	    }
+
+    	    else if(ques==3){
+    	    bot.children[8].className="inputs";
+            bot.children[7].className="user";
+            inp.innerHTML=this.value;
+    	    bot.children[7].innerHTML=inp.value;
+    	    }
+
+    	    else {
+     	    bot.children[10].className="inputs";
+            bot.children[9].className="user";
+            inp.innerHTML=this.value;
+    	    bot.children[9].innerHTML=inp.value;
+            console.log(bot.children[9].className);  	   	
+    	    }
+    	}
+
+       	    function onenter(event){
+       	    	if(event.which==13){ 
+                    abc();
+                    ques++;
+    	    		inp.value="";
+                  console.log(ques);
+                }
+            } 
+
+    </script>
+</body>
 </html>
- <!--col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2-->
