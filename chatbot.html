@@ -14,115 +14,115 @@
 </head>
 <style>
 body{
-	overflow: hidden;
-	background:#434450;
+    overflow: hidden;
+    background:#434450;
 }
 #chat .window{
-	border-radius:10px;
-	background:#fff;
-	height:500px;
-	position: relative;
-	padding: 0;
+    border-radius:10px;
+    background:#fff;
+    height:500px;
+    position: relative;
+    padding: 0;
 }
 .enter{
-	 position: absolute;bottom:0;left:0;
-	 margin:0 auto;
-	 padding: 0px;
-	 background:#fff;
-	 border-radius:0px 0px 20px 20px;
+     position: absolute;bottom:0;left:0;
+     margin:0 auto;
+     padding: 0px;
+     background:#fff;
+     border-radius:0px 0px 20px 20px;
 }
 .form-control{
-	cursor:pointer;
+    cursor:pointer;
 }
 
 .content{
-	overflow-y: auto;
+    overflow-y: auto;
 }
 .enter .input-group{
-	position: relative;
-	padding:0;
-	width:94%;
-	margin:10px;
-	border-radius:20px;
-	border:1px solid #ccc;
+    position: relative;
+    padding:0;
+    width:94%;
+    margin:10px;
+    border-radius:20px;
+    border:1px solid #ccc;
 }
 #chat .enter input{
-	border-radius: 20px 0px 0px 20px;	
-	background-color: rgb(241, 241, 241);
-	border:none;
+    border-radius: 20px 0px 0px 20px;   
+    background-color: rgb(241, 241, 241);
+    border:none;
 }
 
 .input-group a{
-	border-radius: 0px 20px 20px 0px;
-	background:rgb(241, 241, 241);
-	cursor: pointer;
-	text-decoration: none;
-	border:none;
+    border-radius: 0px 20px 20px 0px;
+    background:rgb(241, 241, 241);
+    cursor: pointer;
+    text-decoration: none;
+    border:none;
 }
 #chat .enter input:focus, #chat .enter input:active{
-	box-shadow: none;
-	border:none;
-	outline:none;
-	border:none;
+    box-shadow: none;
+    border:none;
+    outline:none;
+    border:none;
 }
 .form-control input{
-		cursor:pointer;
-	}
-	::-webkit-scrollbar {
-		width:5px;
-	}
-	::-webkit-scrollbar-track{
-		background:#f1f1f1;
-	}
-	::-webkit-scrollbar-thumb{
-		background:#888;
-	}
+        cursor:pointer;
+    }
+    ::-webkit-scrollbar {
+        width:5px;
+    }
+    ::-webkit-scrollbar-track{
+        background:#f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb{
+        background:#888;
+    }
 
 .inputs{
-	min-height:40px;
-	background:rgb(241, 241, 241);;
-	border-radius: 0px 20px 20px 20px;
-	padding: 7px 5px 2px 15px;
-	margin:0;
-	width:50%;
+    min-height:40px;
+    background:rgb(241, 241, 241);;
+    border-radius: 0px 20px 20px 20px;
+    padding: 7px 5px 2px 15px;
+    margin:0;
+    width:50%;
 }
 .user{
-	min-height:40px;
-	background:skyblue;
-	border-radius:20px 0px 20px 20px;
-	padding: 7px 5px 2px 15px;
-	margin:0;
-	width:50%;
-	margin-left:50%;
-	
+    min-height:40px;
+    background:skyblue;
+    border-radius:20px 0px 20px 20px;
+    padding: 7px 5px 2px 15px;
+    margin:0;
+    width:50%;
+    margin-left:50%;
+    
 }
 .inputs p, .user p{
-	font-size: 16px;
+    font-size: 16px;
 }
 @media all and (min-width: 401px){
     #chat .window{
-    	width:400px;
-    	margin:0 auto;
+        width:400px;
+        margin:0 auto;
     }
 }
 @media all and (max-width: 400px){
-	#chat .window{
-		width:100%;
-	}
-	.container-fluid#chat{
-		padding: 0;
-		margin:0!important;
-	}
-	#chat .window{
-		height:100%;
-		border-radius: 0;
-	}
-    .content{
-    	border-radius: 20px 20px 0px 0px;
+    #chat .window{
+        width:100%;
     }
-	.enter, #input-collapse{
-		border-radius: 0!important;
-	}
+    .container-fluid#chat{
+        padding: 0;
+        margin:0!important;
+    }
+    #chat .window{
+        height:100%;
+        border-radius: 0;
+    }
+    .content{
+        border-radius: 20px 20px 0px 0px;
+    }
+    .enter, #input-collapse{
+        border-radius: 0!important;
+    }
 }
 
 </style>
@@ -130,60 +130,60 @@ body{
 <body>
     <div class="container-fluid" id="chat" style="margin:50px 0px;padding:0">
         <div class="window" style="padding: 20px 0px">
-        	<div class="content container-fluid" style="height:91%;" id="contents">
-        		<div class="inputs" id="output">
-        		</div>
+            <div class="content container-fluid" style="height:91%;" id="contents">
+                <div class="inputs" id="output">
+                </div>
 
-        		<div class="user hide" id="usr">
-        		</div>
+                <div class="user hide" id="usr">
+                </div>
 
-        		<div class="inputs hide">
-        			<p>enter time</p>
-        		</div>
+                <div class="inputs hide">
+                    <p>enter time</p>
+                </div>
 
-        		<div class="user hide" id="usr">
-        		</div>
-        		
-        		<div class="inputs hide">
-        			<p>enter name</p>
-        		</div>
+                <div class="user hide" id="usr">
+                </div>
+                
+                <div class="inputs hide">
+                    <p>enter name</p>
+                </div>
 
-        		<div class="user hide" id="usr">       		
-        		</div>
+                <div class="user hide" id="usr">            
+                </div>
 
-        		<div class="inputs hide">
-        			<p>enter age</p>
-        		</div>
+                <div class="inputs hide">
+                    <p>enter age</p>
+                </div>
 
-        		<div class="user hide" id="usr">         
-        		</div>
+                <div class="user hide" id="usr">         
+                </div>
 
-        		<div class="inputs hide">
-        			<p>Thanks for your time!</p>
-        		</div>
+                <div class="inputs hide">
+                    <p>Thanks for your time!</p>
+                </div>
 
-        		<div class="user hide" id="usr">
-        		</div>
+                <div class="user hide" id="usr">
+                </div>
 
-        		<div class="inputs hide">
-        			<p>Oops! Invalid Input!</p>
-        		</div>
+                <div class="inputs hide">
+                    <p>Oops! Invalid Input!</p>
+                </div>
 
-        			
-        	</div>
+                    
+            </div>
                
             <div class="enter" id="ent" >
-            	<div  data-toggle="collapse" data-target="#input-collapse" class="input-group container-fluid">
-            		<input type="text" class="form-control" placeholder="Choose from below...">
-            		<a class="input-group-addon" type="submit" class=""><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16604-200.png" height="20px" width="20" style="opacity: 0.6"></a>
-            	</div>
-            	<div class="collapse container-fluid" id="input-collapse" style=";background:#000;border-radius: 0px 0px 10px 10px">
-            		
-            		    <h3>chat box</h3>
-            		    <p>jhcmvdzhm</p>
-            	</div>
+                <div  data-toggle="collapse" data-target="#input-collapse" class="input-group container-fluid">
+                    <input type="text" class="form-control" placeholder="Choose from below...">
+                    <a class="input-group-addon" type="submit" class=""><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16604-200.png" height="20px" width="20" style="opacity: 0.6"></a>
+                </div>
+                <div class="collapse container-fluid" id="input-collapse" style=";background:#000;border-radius: 0px 0px 10px 10px">
+                    
+                        <h3>chat box</h3>
+                        <p>jhcmvdzhm</p>
+                </div>
 
-            	
+                
             </div>
 
         </div>
@@ -192,65 +192,70 @@ body{
 
     <script type="text/javascript">
 
-    	    var ques=0;
-    		var question = '<p>Enter date</p>';
-    		var bot = document.getElementById('contents');
-    		var inputs = bot.children[0];
-    	    inputs.innerHTML = question;
-    	    var users=document.getElementById("usr");
-    	    
-    	    var inp=document.querySelector("#ent").children[0].children[0];
-    	    inp.addEventListener('keypress', onenter);
-    	    
-    	    	
-    	    function abc(){
-    	    	    	   
+            var ques=0;
+            var question = '<p>Enter date</p>';
+            var bot = document.getElementById('contents');
+            var inputs = bot.children[0];
+            inputs.innerHTML = question;
+            var users=document.getElementById("usr");       
+            var inp=document.querySelector("#ent").children[0].children[0];
+            var bttn=document.querySelector("#ent").children[0].children[1];
+            inp.addEventListener('keypress', onenter);
+            bttn.addEventListener('click', onclick);
+                         
+            function abc(){
+                           
+            if(ques==0){  
+            bot.children[1].className="user";                
+            bot.children[2].className="inputs";
+            inp.innerHTML=this.value;
+            bot.children[1].innerHTML=inp.value;
+            }
+                                                
+            else if(ques==1){
+            bot.children[4].className="inputs"; 
+            bot.children[3].className="user";
+            inp.innerHTML=this.value;
+            bot.children[3].innerHTML=inp.value;
+            }
 
-    	    if(ques==0){  
-    	    bot.children[1].className="user";  	          	 
-     	    bot.children[2].className="inputs";
-     	    inp.innerHTML=this.value;
-    	    bot.children[1].innerHTML=inp.value;
-   	        }
-    	    	    			    	    	
-    	    else if(ques==1){
-   	    	bot.children[4].className="inputs";	
-    	    bot.children[3].className="user";
-    	    inp.innerHTML=this.value;
-    	    bot.children[3].innerHTML=inp.value;
-    	    }
+            else if(ques==2){
+            bot.children[6].className="inputs";     
+            bot.children[5].className="user";
+            inp.innerHTML=this.value;
+            bot.children[5].innerHTML=inp.value;
+            }
 
-    	    else if(ques==2){
-   	    	bot.children[6].className="inputs";  	
-    	    bot.children[5].className="user";
-    	    inp.innerHTML=this.value;
-    	    bot.children[5].innerHTML=inp.value;
-    	    }
-
-    	    else if(ques==3){
-    	    bot.children[8].className="inputs";
+            else if(ques==3){
+            bot.children[8].className="inputs";
             bot.children[7].className="user";
             inp.innerHTML=this.value;
-    	    bot.children[7].innerHTML=inp.value;
-    	    }
+            bot.children[7].innerHTML=inp.value;
+            }
 
-    	    else {
-     	    bot.children[10].className="inputs";
+            else {
+            bot.children[10].className="inputs";
             bot.children[9].className="user";
             inp.innerHTML=this.value;
-    	    bot.children[9].innerHTML=inp.value;
-            console.log(bot.children[9].className);  	   	
-    	    }
-    	}
+            bot.children[9].innerHTML=inp.value;
+            console.log(bot.children[9].className);         
+            }
+        }
 
-       	    function onenter(event){
-       	    	if(event.which==13){ 
+            function onenter(event){
+                if(event.which==13){
                     abc();
                     ques++;
-    	    		inp.value="";
+                    inp.value="";
                   console.log(ques);
                 }
             } 
+            function onclick(){
+                    abc();
+                    ques++;
+                    inp.value=""; 
+            }
+            
 
     </script>
 </body>
