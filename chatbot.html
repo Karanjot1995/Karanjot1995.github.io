@@ -225,7 +225,6 @@ body{
             bot.children[1].innerHTML=inp.value;
             scroll.style.display="none";
             time.style.display="block";
-            inp.value="";
             }
                                                 
             else if(ques==1){
@@ -262,7 +261,7 @@ body{
         }
 
             function onenter(event){
-                if(event.which==13){
+                if(event.which==13 && inp.value!=""){
                     abc();
                     ques++;
                     inp.value="";
