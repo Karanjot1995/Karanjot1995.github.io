@@ -1,5 +1,5 @@
 .navbar-default{
-	background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../images/header-bg.jpg);
+	background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../images/golden/header-bg.jpg);
 	background-size:100% 100%;
 }
 .navbar{
@@ -42,7 +42,7 @@
     border:2px solid #ebebe0;
   }
   #contact{
-  	background:url("../images/contact-us-bg.jpg");
+  	background:url("../images/golden/contact-us-bg.jpg");
   	background-size:100% 100%;
   }
   #members .member{
