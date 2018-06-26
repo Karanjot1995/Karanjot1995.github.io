@@ -6,6 +6,12 @@ body{
 	background:none;
 	border:none;
 }
+.navbar button:hover{
+	background:#1a1a1a!important;
+}
+.navbar button:focus{
+	background: none!important;
+}
 .navbar{
 	background: rgba(0,0,0,0.5);
 	padding:30px 20px;
