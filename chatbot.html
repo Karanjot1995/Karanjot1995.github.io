@@ -110,6 +110,7 @@ body{
     margin-top:15px;
     margin-bottom: 15px;
     text-align: center;
+    cursor: pointer;
 }
 @media all and (min-width: 401px){
     #chat .window{
@@ -186,9 +187,10 @@ body{
                
             <div class="enter" id="ent" >
                 <div  data-toggle="collapse" data-target="#input-collapse" class="input-group container-fluid">
-                    <input type="text" class="form-control" placeholder="Enter value..." disabled>
+                    <input type="text" class="form-control" placeholder="Enter value..." disabled style="cursor: pointer">
                     <a class="input-group-addon" type="submit"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16604-200.png" height="20px" width="20" style="opacity: 0.6"></a>
                 </div>
+
                 <div class="collapse container-fluid" id="input-collapse" style=";background:#000;border-radius: 0px 0px 10px 10px">
                     <input id="scroller" placeholder="Select Date">
                     <input id="mytime" placeholder="Select Time" style="display: none" >
@@ -207,19 +209,19 @@ body{
             var bot = document.getElementById('contents');
             var inputs = bot.children[0];
             inputs.innerHTML = question;
-            var users=document.getElementById("usr");       
+            var users=document.getElementById("usr"); 
+            var inpa=document.querySelector("#ent").children[1].children[0].innerHTML;     
             var inp=document.querySelector("#ent").children[0].children[0];
             var bttn=document.querySelector("#ent").children[0].children[1];
             inp.addEventListener('keypress', onenter);
             bttn.addEventListener('click', onclick);
-            var scr=document.querySelector("#scroller");
 
             function abc(){
             var inp=document.querySelector("#ent").children[0].children[0]; 
             var scroll=document.querySelector("#scroller");
             var time=document.querySelector("#mytime");
             if(ques==0){
-            inp=scroll;             
+            inp=scroll;
             bot.children[1].className="user";               
             bot.children[2].className="inputs";
             bot.children[1].innerHTML=inp.value;
@@ -228,7 +230,7 @@ body{
             }
                                                 
             else if(ques==1){
-            inp=time;              
+            inp=time;
             bot.children[4].className="inputs"; 
             bot.children[3].className="user";
             bot.children[3].innerHTML=inp.value;
@@ -261,7 +263,7 @@ body{
         }
 
             function onenter(event){
-                if(event.which==13 && inp.value!=""){
+                if(event.which==13 && inp.value !== ""){
                     abc();
                     ques++;
                     inp.value="";
