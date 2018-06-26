@@ -2,6 +2,13 @@
 	background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../images/golden/header-bg.jpg);
 	background-size:100% 100%;
 }
+.navbar button:focus{
+  background:none!important;
+
+}
+.navbar button:hover{
+  background:#1a1a1a!important;
+}
 .navbar{
   border:none;
   border-radius: 0;
