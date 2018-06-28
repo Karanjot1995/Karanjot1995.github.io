@@ -187,7 +187,7 @@ body{
                
             <div class="enter" id="ent" >
                 <div  data-toggle="collapse" data-target="#input-collapse" class="input-group container-fluid">
-                    <input type="text" class="form-control" placeholder="Enter value..." disabled style="cursor: pointer">
+                    <input type="text" class="form-control" placeholder="Select from below..." disabled style="cursor: pointer">
                     <a class="input-group-addon" type="submit"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/16604-200.png" height="20px" width="20" style="opacity: 0.6"></a>
                 </div>
 
@@ -230,6 +230,7 @@ body{
             }
                                                 
             else if(ques==1){
+            inp.placeholder="Enter value...";
             inp=time;
             bot.children[4].className="inputs"; 
             bot.children[3].className="user";
