@@ -213,13 +213,19 @@ body{
             var inpa=document.querySelector("#ent").children[1].children[0].innerHTML;     
             var inp=document.querySelector("#ent").children[0].children[0];
             var bttn=document.querySelector("#ent").children[0].children[1];
+            var scr=document.querySelector('#input-collapse').children[0];
+            var myt=document.querySelector('#input-collapse').children[1];
             inp.addEventListener('keypress', onenter);
             bttn.addEventListener('click', onclick);
+
 
             function abc(){
             var inp=document.querySelector("#ent").children[0].children[0]; 
             var scroll=document.querySelector("#scroller");
             var time=document.querySelector("#mytime");
+            var scr=document.querySelector('#input-collapse').children[0];
+            var myt=document.querySelector('#input-collapse').children[1];
+
             if(ques==0){
             inp=scroll;
             bot.children[1].className="user";               
@@ -227,6 +233,7 @@ body{
             bot.children[1].innerHTML=inp.value;
             scroll.style.display="none";
             time.style.display="block";
+            scr.value="";
             }
                                                 
             else if(ques==1){
@@ -238,6 +245,7 @@ body{
             var inp=document.querySelector("#ent").children[0].children[0];
             document.querySelector("#input-collapse").className="hide";
             inp.disabled=false;
+            myt.value="";
             }
 
             else if(ques==2){
@@ -272,10 +280,13 @@ body{
                 }
             } 
             function onclick(){
+                if(inp.value!="" || scr.value!="" || myt.value!=""){
                     abc();
                     ques++;
                     inp.value=""; 
+                }
             }
+
             mobiscroll.date('#scroller', {
               theme: 'material',
               display: 'center'
